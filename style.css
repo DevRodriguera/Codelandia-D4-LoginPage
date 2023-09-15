@@ -17,15 +17,30 @@ main {
     height: 100vh;
     background: url("img/wallpaper.png") no-repeat, #F7FAFC;
     background-position: center;
-    
 }
 
 .content {
+    width: 50vw;
+    height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 1vw;
+}
+
+.title {
+    font-family: 'Merriweather';
+}
+
+#t1 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#t2 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 form {
@@ -37,10 +52,45 @@ form {
     font-family: "Lato";
 }
 
-input {
+.single-input {
     width: 350px;
     height: 40px;
-    flex-shrink: 0;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.single-input > label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.inputKeys {
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid cornflowerblue;
+    outline: none;
+}
+
+.inputKeys:focus {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+label {
+    transition: all 0.5s ease-in-out;
+}
+
+.inputKeys:focus ~ label{
+    transform: translateY(-30px);
+    font-size: 12px;
+    color: cornflowerblue;
+}
+
+.inputSelect {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
 }
 
 button {
@@ -73,5 +123,9 @@ button {
 @media screen and (max-width:992px ) {
     .side-toggle {
         display: none;
+    }
+
+    .content {
+        width: 100vw;
     }
 }

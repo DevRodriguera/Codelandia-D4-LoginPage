@@ -10,20 +10,24 @@
     <main>
         <div class="side-content side-toggle"></div>
         <div class="content">
-            <h2>Bem vindo de volta</h2>
-            <h1>Faça login na sua conta</h1>
+            <div class="title">
+                <h2 id="t1">Bem vindo de volta</h2>
+                <h1 id="t2">Faça login na sua conta</h1>
+            </div>
             <form action="#">
-                <label for="email"> 
-                    <input type="email" name="email" id="">
-                </label>
-                <label for="senha"> 
-                    <input type="password" name="password" id="">
-                </label>
-                <label for="lembrar-login"> 
-                    <input type="checkbox" name="remember" id=""> Lembrar de mim
-                </label>
-                <a href="#">Esqueceu sua senha ?</a>
-
+                <div class="single-input">
+                    <input type="email" name="email" id="email" class="inputKeys">
+                    <label for="email">Email</label>
+                </div>
+                <div class="single-input">
+                    <input type="password" name="password" id="password" class="inputKeys">
+                    <label for="senha">Senha</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="remember" id="" class="inputSelect"> 
+                    <label for="lembrar-login">Lembre de mim</label>
+                    <a href="#">Esqueceu sua senha ?</a>
+                </div>
                 <button class="btnEntrar">Entrar</button>
                 <button class="btnEntrarOutros">Faça login com o Google</button>
             </form>
