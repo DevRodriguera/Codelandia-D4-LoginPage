@@ -7,6 +7,85 @@
     font-style: none;
 }
 
+html, body {
+    height: 100%;
+    background-color: #eceff1;
+    transition: .3s;
+}
+
+#btnTheme{
+    display: none;
+}
+
+.dark, .dark header {
+    background-color: #263238;
+    color: #fff;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi-moon {
+    display: none;
+}
+
+.switch {
+    width: 60px;
+    height: 34px;
+}
+
+#changeTheme {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 70px;
+    height: 36px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 8px;
+    bottom: 4px;
+    background: url("img/sun.svg") no-repeat;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #4063d7;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #4063d7;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(33px);
+    background: url("img/moon.svg") no-repeat;
+
+}
+  
+.slider.round {
+    border-radius: 34px;
+  }
+  
+/* .slider.round:before {
+    border-radius: 34px;
+  } */
+
 main {
     display: flex;
     flex-flow: row nowrap;
@@ -50,6 +129,7 @@ form {
     align-items: center;
     gap: 1vw;
     font-family: "Lato";
+    margin-top: 30px;
 }
 
 .single-input {
@@ -61,7 +141,7 @@ form {
 
 .single-input > label {
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     left: 0;
 }
 
@@ -127,5 +207,9 @@ button {
 
     .content {
         width: 100vw;
+    }
+
+    form{
+        gap: 4vw;
     }
 }
