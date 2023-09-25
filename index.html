@@ -16,8 +16,6 @@
             <div class="switch">
                 <input type="checkbox" id="changeTheme">
                 <label for="changeTheme" class="slider round">
-                    <!-- <i class="bi bi-sun"></i>
-                    <i class="bi bi-moon"></i> -->
                 </label>
             </div>
             <div class="title">
@@ -26,20 +24,23 @@
             </div>
             <form action="#">
                 <div class="single-input">
-                    <input type="email" name="email" id="email" class="inputKeys">
-                    <label for="email">Email</label>
+                    <input id="email" class="input inKeys" required>
+                    <label for="email" class="lblForm">Email</label>
                 </div>
                 <div class="single-input">
-                    <input type="password" name="password" id="password" class="inputKeys">
-                    <label for="password">Senha</label>
+                    <input id="password" class="input inKeys" required>
+                    <label for="password" class="lblForm">Senha</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="remember" id="remember" class="inputSelect"> 
-                    <label for="remember">Lembre de mim</label>
+                <div class="remember">
+                    <div>
+                        <input type="checkbox" name="remember" id="remember" class="input inSelect">
+                        <label for="remember" class="lblForm cbxRound"></label>
+                        <p>Lembre de mim</p>
+                    </div>
                     <a href="#">Esqueceu sua senha ?</a>
                 </div>
                 <button class="btnEntrar">Entrar</button>
-                <button class="btnEntrarOutros">Faça login com o Google</button>
+                <button class="btnEntrarOutros"><img src="img/google.png"> Faça login com o Google</button>
             </form>
         </div>
     </main>
